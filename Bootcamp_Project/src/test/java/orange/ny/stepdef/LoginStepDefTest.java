@@ -39,6 +39,7 @@ public class LoginStepDefTest extends BasePage {
 		logger.info("****** Verify the page title ******");
 		String expected = "OrangeHRM";
 		String actual = driver.getTitle();
+		
 		Assert.assertEquals(actual, expected);
 		System.out.println("The title of the page is :" + actual);
 
