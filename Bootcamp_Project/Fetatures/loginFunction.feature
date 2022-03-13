@@ -1,10 +1,9 @@
-@Smoke
 Feature: User able to login with valid username & password
 
 Description: "User login orangehrm website & verify title"
  
 #Background:   Contain common step     
-                                                  
+@Smoke                                                 
 Scenario: User login with valid username & verify the page title
 
 #Given User can open any browser

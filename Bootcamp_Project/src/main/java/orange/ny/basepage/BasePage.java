@@ -17,8 +17,12 @@ public class BasePage {
 	
 	public static WebDriver driver;
 	public static Properties prop;
+	public static Logger logger;
 	
 	public BasePage() {
+		logger = Logger.getLogger("Test Lead Alam"); // Added logger
+		PropertyConfigurator.configure("Log4j.properties");// Added logger
+	
 
 		try {
 			prop = new Properties();
@@ -38,7 +42,7 @@ public class BasePage {
 	
 	public static void initializations() { // setUP();
 		String browserName = prop.getProperty("browserName");
-
+		logger.info("****** Starting Chrome Browser ******");
 		if (browserName.equals("chrome")) {
 		
 			System.setProperty("webdriver.chrome.driver", prop.getProperty("mac"));
